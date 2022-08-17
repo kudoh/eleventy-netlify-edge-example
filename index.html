@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>Netlify Edge Functions example</h1>
+  {% edge "liquid" %}
+  {% if eleventy.edge.cookies.abtesting == "A" %}
+    <p style="color: red">Aパターンコンテンツ</p>
+  {% else %}
+    <p style="color: blue">Bパターンコンテンツ</p>
+  {% endif %}
+  {% endedge %}
+</body>
+</html>
